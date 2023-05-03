@@ -44,8 +44,39 @@ fadeEls.forEach((fadeEl, idx) => {
   });
 });
 
-new Swiper(".swiper-container", {
+new Swiper(".notice-line .swiper-container", {
   direction: "vertical",
   autoplay: true,
   loop: true,
+});
+
+new Swiper(".promotion .swiper-container", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  pagination: {
+    el: ".promotion .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    prevEl: ".promotion .swiper-prev",
+    nextEl: ".promotion .swiper-next",
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});
+
+const promotionEl = document.querySelector(".promotion");
+const promotionToggleEl = document.querySelector(".toggle-promotion");
+let isHidePromotion = false;
+
+promotionToggleEl.addEventListener("click", function () {
+  isHidePromotion = !isHidePromotion;
+  if (isHidePromotion) {
+    promotionEl.classList.add("hide");
+  } else {
+    promotionEl.classList.remove("hide");
+  }
 });
