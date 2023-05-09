@@ -20,7 +20,6 @@ const badgeEl = document.querySelector("header .badges");
 window.addEventListener(
   "scroll",
   _.throttle(() => {
-    console.log(window.scrollY);
     if (window.scrollY > 500) {
       gsap.to(badgeEl, 0.6, {
         opacity: 0,
@@ -68,6 +67,17 @@ new Swiper(".promotion .swiper-container", {
   },
 });
 
+new Swiper(".awards .swiper-container", {
+  autoplay: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    prevEl: ".awards .swiper-prev",
+    nextEl: ".awards .swiper-next",
+  },
+});
+
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleEl = document.querySelector(".toggle-promotion");
 let isHidePromotion = false;
@@ -79,4 +89,15 @@ promotionToggleEl.addEventListener("click", function () {
   } else {
     promotionEl.classList.remove("hide");
   }
+});
+
+const spyEls = document.querySelectorAll("section.scroll-spy");
+
+spyEls.forEach((spyEl) => {
+  new ScrollMagic.Scene({
+    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
+    triggerHook: 0.8,
+  })
+    .setClassToggle(spyEl, "show")
+    .addTo(new ScrollMagic.Controller());
 });

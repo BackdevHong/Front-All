@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks Coffee Korea</title>
+
+    <!-- OG -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Starbucks" />
     <meta property="og:title" content="Starbucks Coffee Korea" />
@@ -15,6 +17,7 @@
     <meta property="og:image" content="./images/starbucks_seo.jpg" />
     <meta property="og:url" content="https://starbucks.co.kr" />
 
+    <!-- Twiter -->
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:site" content="Starbucks" />
     <meta property="twitter:title" content="Starbucks Coffee Korea" />
@@ -25,6 +28,7 @@
     <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
     <meta property="twitter:url" content="https://starbucks.co.kr" />
 
+    <!-- COMMON(CSS, FONT, ICON) -->
     <link rel="icon" href="./favicon.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
@@ -42,24 +46,41 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
 
+    <!-- Lodash -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
       integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- GSAP -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
       integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- SWIPER -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"
     />
     <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+    <!-- ScrollMagic -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- YOUTUBE API -->
     <script defer src="./js/youtube.js"></script>
+
+    <!-- Main JavaScript -->
     <script defer src="./js/index.js"></script>
   </head>
   <body>
@@ -575,50 +596,90 @@
     </section>
 
     <!-- SEASON PRODUCT -->
-    <section class="season-product">
+    <section class="season-product scroll-spy">
       <div class="inner">
         <img
           src="./images/floating3.png"
           alt="icon3"
           class="floating floating3"
         />
-        <img src="./images/season_product_image.png" alt="" class="product" />
+        <img
+          src="./images/season_product_image.png"
+          alt=""
+          class="product back-to-position to-right delay-0"
+        />
         <div class="text-group">
-          <img src="./images/season_product_text1.png" alt="" class="title" />
+          <img
+            src="./images/season_product_text1.png"
+            alt=""
+            class="title back-to-position to-left delay-1"
+          />
           <img
             src="./images/season_product_text2.png"
             alt=""
-            class="description"
+            class="description back-to-position to-left delay-2"
           />
           <div class="more">
-            <a href="javascript:void(0)" class="btn">자세히 보기</a>
+            <a
+              href="javascript:void(0)"
+              class="btn back-to-position to-left delay-3"
+              >자세히 보기</a
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- RESERVE COFFEE -->
-    <section class="reserve-coffee">
+    <section class="reserve-coffee scroll-spy">
       <div class="inner">
-        <img src="./images/reserve_logo.png" alt="" class="reserve-logo" />
+        <img
+          src="./images/reserve_logo.png"
+          alt=""
+          class="reserve-logo back-to-position to-right delay-0"
+        />
         <div class="text-group">
-          <img src="./images/reserve_text.png" alt="" class="description" />
+          <img
+            src="./images/reserve_text.png"
+            alt=""
+            class="description back-to-position to-right delay-1"
+          />
           <div class="more">
-            <a href="javascript:void(0)" class="btn btn--gold">자세히 보기</a>
+            <a
+              href="javascript:void(0)"
+              class="btn btn--gold back-to-position to-right delay-2"
+              >자세히 보기</a
+            >
           </div>
         </div>
-        <img src="./images/reserve_image.png" alt="" class="product" />
+        <img
+          src="./images/reserve_image.png"
+          alt=""
+          class="product back-to-position to-left delay-3"
+        />
       </div>
     </section>
 
     <!-- PICK YOUR FAVORITE -->
-    <section class="pick-your-favorite">
+    <section class="pick-your-favorite scroll-spy">
       <div class="inner">
         <div class="text-group">
-          <img src="./images/favorite_text1.png" alt="" class="title" />
-          <img src="./images/favorite_text2.png" alt="" class="description" />
+          <img
+            src="./images/favorite_text1.png"
+            alt=""
+            class="title back-to-position to-right delay-0"
+          />
+          <img
+            src="./images/favorite_text2.png"
+            alt=""
+            class="description back-to-position to-right delay-1"
+          />
           <div class="more">
-            <a href="javascript:void(0)" class="btn btn--white">자세히 보기</a>
+            <a
+              href="javascript:void(0)"
+              class="btn btn--white back-to-position to-right delay-2"
+              >자세히 보기</a
+            >
           </div>
         </div>
       </div>
@@ -640,5 +701,109 @@
     </section>
 
     <!-- FIND THE STORE -->
+    <section class="find-store scroll-spy">
+      <div class="inner">
+        <img src="./images/find_store_texture1.png" alt="" class="texture1" />
+        <img src="./images/find_store_texture2.png" alt="" class="texture2" />
+        <img
+          src="./images/find_store_picture1.jpg"
+          alt=""
+          class="picture picture1 back-to-position to-right delay-0"
+        />
+        <img
+          src="./images/find_store_picture2.jpg"
+          alt=""
+          class="picture picture2 back-to-position to-right delay-1"
+        />
+        <div class="text-group">
+          <img
+            src="./images/find_store_text1.png"
+            alt=""
+            class="title back-to-position to-left delay-0"
+          />
+          <img
+            src="./images/find_store_text2.png"
+            alt=""
+            class="description back-to-position to-left delay-1"
+          />
+          <div class="more back-to-position to-left delay-2">
+            <a href="javascript:void(0)" class="btn">매장 찾기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="awards">
+      <div class="inner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/awards_slide1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide4.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide5.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide6.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide8.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide9.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/awards_slide10.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="inner">
+        <ul class="menu">
+          <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+          <li>
+            <a href="javascript:void(0)">영상정보처리기기 운영관리 방침</a>
+          </li>
+          <li><a href="javascript:void(0)">홈페이지 이용약관</a></li>
+          <li><a href="javascript:void(0)">위치정보 이용약관</a></li>
+          <li><a href="javascript:void(0)">스타벅스 카드 이용약관</a></li>
+          <li><a href="javascript:void(0)">윤리경영 핫라인</a></li>
+        </ul>
+
+        <div class="btn-group">
+          <a href="javascript:void(0)" class="btn btn--white">찾아오시는 길</a>
+          <a href="javascript:void(0)" class="btn btn--white">신규입점제의</a>
+          <a href="javascript:void(0)" class="btn btn--white">사이트 맵</a>
+        </div>
+
+        <p class="copyright">
+          &copy;
+          <span class="this-year">
+            Starbucks Coffee Company, All Rights Reserved.
+          </span>
+        </p>
+        <img src="./images/starbucks_logo_only_text.png" alt="" class="logo" />
+      </div>
+    </footer>
   </body>
 </html>
