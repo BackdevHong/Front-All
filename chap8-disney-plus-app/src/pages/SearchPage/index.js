@@ -46,7 +46,7 @@ const SearchPage = () => {
                 <div
                   className="movie__column-poster"
                   onClick={() => {
-                    navigate(`/${movie.id}`);
+                    navigate(`/${movie.id}?type=${movie.media_type}`);
                   }}
                 >
                   <img
