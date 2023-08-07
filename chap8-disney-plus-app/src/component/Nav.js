@@ -171,7 +171,7 @@ const Nav = () => {
       <Logo>
         <img
           alt="Desiny Plus Logo"
-          src="/Images/logo.svg"
+          src="/images/logo.svg"
           onClick={() => {
             window.location.href = "/";
           }}
