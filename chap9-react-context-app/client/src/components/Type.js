@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Products from "./Products";
+import Options from "./Options";
+import ErrorBanner from "./ErrorBanner";
 
 const Type = ({ orderType }) => {
   const [items, setItems] = useState([]);
+  const [error, setError] = useState({});
 
   useEffect(() => {
     loadItems(orderType);
@@ -14,19 +17,26 @@ const Type = ({ orderType }) => {
       const res = await axios.get(`http://localhost:4000/${orderType}`);
       setItems(res.data);
     } catch (error) {
-      console.log(error.message);
+      setError({
+        errorStatus: true,
+        errorMessage: error.message,
+      });
     }
   };
 
-  const ItemComponent = orderType === "products" ? Products : null;
+  const ItemComponent = orderType === "products" ? Products : Options;
 
-  const optionItems = items.map((item) => {
+  const optionItems = items.map((item) => (
     <ItemComponent
       key={item.name}
       name={item.name}
       imagePath={item.imagePath}
-    />;
-  });
+    />
+  ));
+
+  if (error.errorStatus === true) {
+    return <ErrorBanner message={error.errorMessage} />;
+  }
 
   return (
     <div>
@@ -36,7 +46,7 @@ const Type = ({ orderType }) => {
       <div
         style={{
           display: "flex",
-          flexDirection: orderType === "option" ? "column" : "row",
+          flexDirection: orderType === "options" ? "column" : "row",
         }}
       >
         {optionItems}

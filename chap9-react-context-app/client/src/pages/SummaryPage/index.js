@@ -9,7 +9,7 @@ const SummaryPage = () => {
           type="checkbox"
           checked={checked}
           id="confirm-checkbox"
-          onClick={(e) => {
+          onChange={(e) => {
             setChecked(e.target.checked);
           }}
         />{" "}
