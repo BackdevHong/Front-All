@@ -7,7 +7,7 @@ import { useState } from "react";
 function App() {
   const [step, setStep] = useState(0);
   return (
-    <div style={{ pfirstg: "4rem" }}>
+    <div style={{ padding: "4rem" }}>
       {step === 0 && <OrderPage setStep={setStep} />}
       {step === 1 && <SummaryPage setStep={setStep} />}
       {step === 2 && <CompletePage setStep={setStep} />}

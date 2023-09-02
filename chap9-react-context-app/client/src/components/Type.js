@@ -26,8 +26,6 @@ const Type = ({ orderType }) => {
     }
   };
 
-  console.log(orderData);
-
   const ItemComponent = orderType === "products" ? Products : Options;
 
   const optionItems = items.map((item) => (

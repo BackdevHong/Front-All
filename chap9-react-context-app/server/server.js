@@ -32,7 +32,7 @@ let orderHistory = [];
 
 app.post("/order", (req, res) => {
   const orderNumber = Math.floor(Math.random() * 1000000);
-  let order = { price: req.body.totals.total, orderNumber };
+  let order = { price: req.body.totals.totals, orderNumber };
   orderHistory.push(order);
   res.status(201).json(orderHistory);
 });
