@@ -1,12 +1,14 @@
-const counter = (state = 0, action : { type: string }) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return state + 1;
-    case "DECREMENT":
-      return state - 1;
-    default:
-      return state;
-  }
-}
+import { combineReducers } from "redux";
+import counter from "./counter";
+import todos from "./todos";
+import posts from "./posts";
 
-export default counter;
+const rootReducer = combineReducers({
+  counter,
+  todos,
+  posts
+})
+
+export default rootReducer;
+
+export type RootState = ReturnType<typeof rootReducer>;
